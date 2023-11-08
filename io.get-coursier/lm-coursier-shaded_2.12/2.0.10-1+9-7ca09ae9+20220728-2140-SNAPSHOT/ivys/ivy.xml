@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- hello -->
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+  <info publication="20220728214046" status="integration" revision="2.0.10-1+9-7ca09ae9+20220728-2140-SNAPSHOT" module="lm-coursier-shaded_2.12" organisation="io.get-coursier">
+    <description homepage="https://github.com/coursier/sbt-coursier">lm-coursier-shaded</description>
+  </info>
+  <configurations>
+    <conf description="" visibility="public" name="plugin"/>
+    <conf description="" visibility="public" name="pom"/>
+    <conf description="" visibility="public" name="test" extends="runtime"/>
+    <conf description="" visibility="public" name="provided"/>
+    <conf description="" visibility="public" name="compile-internal" extends="compile,optional,provided"/>
+    <conf description="" visibility="public" name="docs"/>
+    <conf description="" visibility="public" name="optional"/>
+    <conf description="" visibility="public" name="compile"/>
+    <conf description="" visibility="public" name="test-internal" extends="test,optional,provided"/>
+    <conf description="" visibility="public" name="scala-tool"/>
+    <conf description="" visibility="public" name="sources"/>
+    <conf description="" visibility="public" name="runtime" extends="compile"/>
+    <conf description="" visibility="public" name="runtime-internal" extends="runtime,optional"/>
+  </configurations>
+  <publications>
+    <artifact conf="docs" ext="jar" type="doc" name="lm-coursier-shaded_2.12" e:classifier="javadoc"/>
+    <artifact conf="compile" ext="jar" type="jar" name="lm-coursier-shaded_2.12"/>
+    <artifact conf="pom" ext="pom" type="pom" name="lm-coursier-shaded_2.12"/>
+    <artifact conf="sources" ext="jar" type="src" name="lm-coursier-shaded_2.12" e:classifier="sources"/>
+  </publications>
+  <dependencies>
+    <dependency conf="scala-tool-&gt;default" rev="2.12.15" name="scala-compiler" org="org.scala-lang"> </dependency>
+    <dependency conf="scala-tool-&gt;optional(default)" rev="2.12.15" name="scala-compiler" org="org.scala-lang"> </dependency>
+    <dependency conf="scala-tool-&gt;default" rev="2.12.15" name="scala-library" org="org.scala-lang"> </dependency>
+    <dependency conf="scala-tool-&gt;optional(default)" rev="2.12.15" name="scala-library" org="org.scala-lang"> </dependency>
+    <dependency conf="compile-&gt;default(compile)" rev="2.12.15" name="scala-library" org="org.scala-lang"> </dependency>
+    <dependency conf="plugin-&gt;default(compile)" rev="2.1.1" name="paradise_2.12.15" org="org.scalamacros"> </dependency>
+    <!-- shaded dependency io.get-coursier:coursier_2.12
+ <dependency conf="compile-&gt;default(compile)" rev="2.1.0-M6-44-gc47ecec07" name="coursier_2.12" org="io.get-coursier" xmlns:e="http://ant.apache.org/ivy/extra"> </dependency>
+-->
+    <dependency conf="provided-&gt;default(compile)" rev="0.2.5" name="data-class_2.12" org="io.github.alexarchambault"> </dependency>
+    <dependency conf="compile-&gt;default(compile)" rev="2.7.0" name="scala-collection-compat_2.12" org="org.scala-lang.modules"> </dependency>
+    <dependency conf="compile-&gt;default(compile)" rev="1.3.0" name="scala-xml_2.12" org="org.scala-lang.modules"> </dependency>
+    <dependency conf="compile-&gt;default(compile)" rev="1.3.4" name="librarymanagement-ivy_2.12" org="org.scala-sbt"> </dependency>
+    <dependency conf="test-&gt;default(compile)" rev="3.2.12" name="scalatest_2.12" org="org.scalatest"> </dependency>
+  </dependencies>
+</ivy-module>
