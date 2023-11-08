@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+  <info publication="20220728214259" status="integration" revision="0.9.2-SNAPSHOT" module="shaded-jawn-parser_2.12" organisation="com.eed3si9n">
+    <description homepage="https://github.com/eed3si9n/sjson-new">A Scala library for JSON (de)serialization</description>
+  </info>
+  <configurations>
+    <conf description="" visibility="public" name="plugin"/>
+    <conf description="" visibility="public" name="pom"/>
+    <conf description="" visibility="public" name="test" extends="runtime"/>
+    <conf description="" visibility="public" name="provided"/>
+    <conf description="" visibility="public" name="compile-internal" extends="compile,optional,provided"/>
+    <conf description="" visibility="public" name="docs"/>
+    <conf description="" visibility="public" name="optional"/>
+    <conf description="" visibility="public" name="compile"/>
+    <conf description="" visibility="public" name="test-internal" extends="test,optional,provided"/>
+    <conf description="" visibility="public" name="scala-tool"/>
+    <conf description="" visibility="public" name="sources"/>
+    <conf description="" visibility="public" name="runtime" extends="compile"/>
+    <conf description="" visibility="public" name="runtime-internal" extends="runtime,optional"/>
+  </configurations>
+  <publications>
+    <artifact conf="compile" ext="jar" type="jar" name="shaded-jawn-parser_2.12"/>
+    <artifact conf="pom" ext="pom" type="pom" name="shaded-jawn-parser_2.12"/>
+    <artifact conf="sources" ext="jar" type="src" name="shaded-jawn-parser_2.12" e:classifier="sources"/>
+    <artifact conf="docs" ext="jar" type="doc" name="shaded-jawn-parser_2.12" e:classifier="javadoc"/>
+  </publications>
+  <dependencies>
+    <dependency conf="scala-tool-&gt;default" rev="2.12.12" name="scala-compiler" org="org.scala-lang"> </dependency>
+    <dependency conf="scala-tool-&gt;optional(default)" rev="2.12.12" name="scala-compiler" org="org.scala-lang"> </dependency>
+    <dependency conf="scala-tool-&gt;default" rev="2.12.12" name="scala-library" org="org.scala-lang"> </dependency>
+    <dependency conf="scala-tool-&gt;optional(default)" rev="2.12.12" name="scala-library" org="org.scala-lang"> </dependency>
+    <dependency conf="compile-&gt;default(compile)" rev="2.12.12" name="scala-library" org="org.scala-lang"> </dependency>
+    <!-- shaded dependency org.typelevel:jawn-parser_2.12
+ <dependency conf="compile-&gt;default(compile)" rev="1.0.0" name="jawn-parser_2.12" org="org.typelevel" xmlns:e="http://ant.apache.org/ivy/extra"> </dependency>
+-->
+  </dependencies>
+</ivy-module>
